@@ -1,8 +1,18 @@
-import { usersData } from '@app/fakeData';
+import { Post } from '@modules/posts';
+import { IUser } from 'types/users';
+import { User } from './schema';
 
 export const resolvers = {
   Query: {
-    users: () => usersData,
-    user: async (name: string) => usersData.find((user) => console.log(name)),
+    users: async () => await User.find(),
+    user: async (parent, args) => await User.findOne(args),
+  },
+  User: {
+    posts: async (parent) =>
+      await Post.find({
+        _id: {
+          $in: parent.posts,
+        },
+      }),
   },
 };

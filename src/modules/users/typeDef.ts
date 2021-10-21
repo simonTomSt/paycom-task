@@ -2,13 +2,14 @@ import { gql } from 'apollo-server-core';
 
 export const typeDef = gql`
   type User {
+    _id: ID!
     name: String!
     surname: String!
     posts: [Post!]!
   }
 
-  type Query {
+  extend type Query {
     users: [User!]!
-    user(name: String!): User!
+    user(name: String!): User
   }
 `;
