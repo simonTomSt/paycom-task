@@ -1,3 +1,4 @@
+//Normally there should be another database connection only for tests
 import apolloConfig from '../app/apollo-config';
 import { ApolloServer } from 'apollo-server-express';
 import { postsQueries } from '../mocks/postsQueries.mock';
