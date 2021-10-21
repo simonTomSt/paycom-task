@@ -1,7 +1,7 @@
 import { ApolloServer } from 'apollo-server-express';
 import config from '@app/config';
 import express from 'express';
-import { apolloConfig } from '@app/apollo-config';
+import apolloConfig from '@app/apollo-config';
 import Server from '@app/server';
 
 const app = express();

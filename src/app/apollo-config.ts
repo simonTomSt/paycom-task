@@ -9,8 +9,10 @@ const baseTypeDefs = gql`
   type Query
 `;
 
-export const apolloConfig = {
+const apolloConfig = {
   typeDefs: [baseTypeDefs, usersTypeDef, postsTypeDef],
   resolvers: merge({}, usersResolvers, postsResolvers),
   context: async () => ({ db: await mongoose.connect(config.DATABASE_URL) }),
 };
+
+export default apolloConfig;
