@@ -1,4 +1,5 @@
-import { Document, model, Schema } from 'mongoose';
+import { model, Schema } from 'mongoose';
+import { SchemaModel } from 'types/common';
 import { IUser } from 'types/users';
 
 export const UserSchema = new Schema({
@@ -7,4 +8,4 @@ export const UserSchema = new Schema({
   posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
 });
 
-export const User = model<IUser & Document>('User', UserSchema);
+export const User = model<SchemaModel<IUser>>('User', UserSchema);

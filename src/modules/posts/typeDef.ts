@@ -5,7 +5,7 @@ export const typeDef = gql`
     _id: ID
     name: String!
     description: String
-    users: [User!]!
+    users: [User!]
   }
 
   extend type Query {
@@ -13,5 +13,3 @@ export const typeDef = gql`
     post(_id: ID, name: String, description: String): Post!
   }
 `;
-// users: [User!]!
-// post(name: String!): Post!

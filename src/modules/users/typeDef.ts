@@ -5,11 +5,11 @@ export const typeDef = gql`
     _id: ID!
     name: String!
     surname: String!
-    posts: [Post!]!
+    posts: [Post!]
   }
 
   extend type Query {
     users: [User!]!
-    user(name: String!): User
+    user(_id: ID, name: String, surname: String): User
   }
 `;

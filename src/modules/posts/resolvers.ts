@@ -1,21 +1,19 @@
 import { User } from '@modules/users';
+import { UsersService } from '@modules/users/usersService';
+import { PostsService } from './postsService';
 import { Post } from './schema';
 
-const findAllPosts = async (parent) => {
-  console.log(parent);
-  console.log('parent');
-
-  return await Post.find();
-};
+const postsService = new PostsService();
+const userService = new UsersService();
 
 export const resolvers = {
   Query: {
-    posts: async () => await Post.find(),
-    post: async (parent, args) => await Post.findOne(args),
+    posts: async () => await postsService.findAll(),
+    post: async (parent, args) => await postsService.findSingle(args),
   },
   Post: {
     users: async (parent) =>
-      await User.find({
+      await userService.findAll({
         _id: {
           $in: parent.users,
         },

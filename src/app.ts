@@ -1,6 +1,7 @@
 import { ApolloServer } from 'apollo-server-express';
 import config from '@app/config';
 import express from 'express';
+import { resolvers } from '@modules/users/resolvers';
 import { apolloConfig } from '@app/apollo-config';
 
 const startServer = async () => {
