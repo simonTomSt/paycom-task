@@ -8,7 +8,7 @@ const userService = new UsersService();
 
 export const resolvers = {
   Query: {
-    posts: async () => await postsService.findAll(),
+    posts: postsService.findAll,
     post: async (parent, args) => await postsService.findSingle(args),
   },
   Post: {
