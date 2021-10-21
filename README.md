@@ -31,3 +31,18 @@ npm start
 ```
 npm run test
 ```
+
+## Database structure
+```
+users table
+```
+![image](https://user-images.githubusercontent.com/64553739/138314366-e29854ae-89e3-4d5f-94b5-2fff0bb1c4a2.png)
+```
+```
+
+
+```
+posts table
+```
+![image](https://user-images.githubusercontent.com/64553739/138314687-22a135fb-a515-4efa-abbf-f8c5c4c13c74.png)
+
