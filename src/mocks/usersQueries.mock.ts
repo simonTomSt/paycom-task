@@ -25,6 +25,14 @@ export const usersQueries = {
     }
   `,
 
+  FIND_USER_FAILED: gql`
+    query {
+      user(name: "Should fail") {
+        name
+      }
+    }
+  `,
+
   FIND_USERS: gql`
     query {
       users {

@@ -1,5 +1,5 @@
 import apolloConfig from '../app/apollo-config';
-import { ApolloServer, gql } from 'apollo-server-express';
+import { ApolloServer } from 'apollo-server-express';
 import { usersQueries } from '../mocks/usersQueries.mock';
 
 const server = new ApolloServer(apolloConfig);
